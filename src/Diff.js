@@ -8,7 +8,7 @@ const Diff = ({amount, amountOnDate, now, diff, gl, status}) => {
     return(
         <div className="current-amounts">
             <div className="current-perc">
-                +{percentOutput}
+                {percentOutput}
             </div>
             <div className={`current-gain-loss ${status}`}>
                 <CurrencyFormat
