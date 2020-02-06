@@ -5,8 +5,6 @@ class Price extends Component {
 
   
   render() {
-    // let lastPrice = this.state.prices[this.state.prices.length - 1] || 0;
-    // console.log(lastPrice);
     return (
       <div className="current-price">
         <CurrencyFormat

@@ -66,7 +66,6 @@ class App extends Component {
     axios
       .get(`https://min-api.cryptocompare.com/data/pricehistorical?fsym=BTC&tsyms=USD&ts=${ts}`)
       .then(res => {
-        console.log(res.data.BTC.USD);
         this.setState({amountOnDate: res.data.BTC.USD});
         this.setState({date: dateVal});
         this.updatePercentage();
@@ -93,7 +92,7 @@ class App extends Component {
 
       // websocket onopen event listener
       ws.onopen = evt => {
-          console.log("connected websocket main component");
+          // console.log("connected websocket main component");
           const payload = {
           event: "subscribe",
           pair: ["XBT/USD"],
