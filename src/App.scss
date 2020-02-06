@@ -1,0 +1,81 @@
+body {
+  color: #FFF;
+  background: #0D0F51;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(45deg, #0D0F51, #C474A4);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(45deg, #0D0F51, #C474A4); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.App {
+  text-align: center;
+  min-height: 100vh;
+}
+
+.current-price {
+  font-size: 5rem;
+  font-weight: bold;
+  margin: 2rem 0;
+}
+
+.current-gain-loss {
+  font-size: 5rem;
+  font-weight: bold;
+  margin: 2rem 0;
+
+  &.profit {
+    color: #9fba71;
+  }
+  &.loss {
+    color: #ba717b;
+  }
+}
+
+.app-layout {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  display: grid;
+  min-height: 100vh;
+  grid-columns: 1fr 1fr;
+  grid-columns: 1fr;
+
+  > div:first-child {
+    grid-row:1;
+    grid-column: 1;
+  }
+  > div:last-child {
+    grid-row:1;
+    grid-column: 2;
+  }
+
+  > div {
+    // flex: 1;
+    margin: 2rem;
+  }
+
+  @media screen and (max-width:980px) {
+    grid-columns: 1fr;
+    grid-columns: 1fr 1fr;
+    > div {
+      margin: 1rem;
+    }
+
+    > div:first-child {
+      grid-row:1;
+      grid-column: 1;
+    }
+    > div:last-child {
+      grid-row:2;
+      grid-column: 1;
+    }
+  }
+}
+
+// .VictoryContainer {
+//   position: fixed;
+//   z-index: 10;
+//   top: 0;
+//   left: 0;
+//   width: 100vw;
+//   height: 100vh;
+// }
+
